@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service für ZRAP_I_DDL_LUTZ'
+define service ZRAP_I_SRV_LUTZ {
+  expose ZRAP_I_DDL_LUTZ;
+  expose I_Country;
+}
