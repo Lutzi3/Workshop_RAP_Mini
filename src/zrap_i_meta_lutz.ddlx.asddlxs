@@ -16,7 +16,13 @@ annotate entity ZRAP_I_DDL_LUTZ with
             purpose:  #STANDARD,
             type:     #IDENTIFICATION_REFERENCE,
             label:    'Detail',
-            position: 10 }
+            position: 10 },
+            {
+                  type: #FIELDGROUP_REFERENCE,
+                  position: 20,
+                  targetQualifier: 'Suchfeld',
+                  label: 'Suchfeld'
+                  }
         ]
 
 
@@ -28,7 +34,7 @@ annotate entity ZRAP_I_DDL_LUTZ with
   @Search.defaultSearchElement: true
   partner;
   @UI: {
-   
+
       identification:[ { position: 20 } ]
       }
 
@@ -44,14 +50,14 @@ annotate entity ZRAP_I_DDL_LUTZ with
 
   bpext;
   @UI: {
-  identification:[ { position: 50 } ]
+  fieldGroup:[ { qualifier: 'Suchfeld',position: 60,importance: #HIGH, label: 'Suchfeld änderbar' } ],
+  selectionField: [{position: 60 }]
   }
 
   bu_sort1;
   @UI: {
-  identification:[ { position: 60 } ],
-  lineItem: [ { position: 60, importance: #HIGH }],
-  selectionField: [{position: 60 }]
+  identification:[ { position: 70 } ],
+   lineItem: [ { position: 60, importance: #HIGH }]
   }
 
   title;
@@ -73,7 +79,7 @@ annotate entity ZRAP_I_DDL_LUTZ with
 
   name_last;
   @UI: {
-  identification:[ { position: 100 } ] 
+  identification:[ { position: 100 } ]
   }
 
   city1;
@@ -100,5 +106,9 @@ annotate entity ZRAP_I_DDL_LUTZ with
   }
 
   country;
+  @UI: {
+  identification:[ { position: 140 } ]
+  }
+  chstmp;  
 
 }

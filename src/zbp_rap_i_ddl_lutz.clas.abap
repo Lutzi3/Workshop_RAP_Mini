@@ -1,0 +1,5 @@
+CLASS zbp_rap_i_ddl_lutz DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zrap_i_ddl_lutz.
+ENDCLASS.
+
+CLASS zbp_rap_i_ddl_lutz IMPLEMENTATION.
+ENDCLASS.
