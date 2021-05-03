@@ -1,0 +1,114 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: {
+  typeName: 'Business Partner',
+  typeNamePlural: 'Business Partners',
+  title: { type: #STANDARD, value: 'Name_BuPa' }
+  }
+}
+annotate entity ZRAP_I_DDL_HIM with
+{
+
+  @UI.facet: [
+          {
+            id:       'Partner',
+            purpose:  #STANDARD,
+            type:     #IDENTIFICATION_REFERENCE,
+            label:    'Detail',
+            position: 10 },
+            {
+                  type: #FIELDGROUP_REFERENCE,
+                  position: 20,
+                  targetQualifier: 'Suchfeld',
+                  label: 'Suchfeld'
+                  }
+        ]
+
+
+  @UI: {
+      lineItem: [ { position: 10, importance: #HIGH } ],
+      identification:[ { position: 10  } ],
+      selectionField: [{position: 10 }]
+      }
+  @Search.defaultSearchElement: true
+  partner;
+  @UI: {
+
+      identification:[ { position: 20 } ]
+      }
+
+  type;
+  @UI: {
+  identification:[ { position: 30 } ]
+  }
+
+  bu_group;
+  @UI: {
+  identification:[ { position: 40 } ]
+  }
+
+  bpext;
+  @UI: {
+  fieldGroup:[ { qualifier: 'Suchfeld',position: 60,importance: #HIGH, label: 'Suchfeld änderbar' } ],
+  selectionField: [{position: 60 }]
+  }
+
+  bu_sort1;
+  @UI: {
+  identification:[ { position: 70 } ],
+   lineItem: [ { position: 60, importance: #HIGH }]
+  }
+
+  title;
+  @UI: {
+  lineItem:[ { position: 70, label: 'Voller Name' } ],
+  identification:[ { position: 70, label: 'Voller Name' } ],
+  selectionField: [{position: 70 }]
+  }
+  @Search.defaultSearchElement: true
+  Name_BuPa;
+  @UI: {
+  identification:[ { position: 80 } ]
+  }
+
+  name_org1;
+  @UI: {
+  identification:[ { position: 90 } ]
+  }
+
+  name_last;
+  @UI: {
+  identification:[ { position: 100 } ]
+  }
+
+  city1;
+  @UI: {
+  identification:[ { position: 110 } ],
+  lineItem:[ { position: 110 } ]
+  }
+
+  post_code1;
+  @UI: {
+  identification:[ { position: 120 } ]
+  }
+
+  street;
+  @UI: {
+  identification:[ { position: 130 } ]
+  }
+
+  house_num1;
+  @UI: {
+  lineItem:[ { position: 105 } ],
+  identification:[ { position: 105 } ],
+  selectionField: [{position: 105 }]
+  }
+
+  country;
+  @UI: {
+  identification:[ { position: 140 } ]
+  }
+  chstmp;  
+
+}

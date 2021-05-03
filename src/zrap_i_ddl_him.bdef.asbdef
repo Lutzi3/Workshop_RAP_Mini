@@ -1,0 +1,16 @@
+unmanaged implementation in class zbp_rap_i_ddl_him unique;
+
+define behavior for ZRAP_I_DDL_HIM alias BuPartner
+
+//persistent table <???>
+//lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  field ( read only ) Name_BuPa, addrnumber, bpext, bu_group, city1, country, crstmp, chstmp, title, name_org1,
+  house_num1, partner, type, name_last, post_code1, street;
+  field ( mandatory ) bu_sort1;
+  //  create;
+  update;
+  //  delete;
+}
